@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js" defer></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" defer></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+
+    function Notice() {
+      alert("Please Sign Up");
+    }
+
+    class Greeting extends React.Component {
+
+      Greet() {
+        let data = this.props;
+        alert("Hallo Reda")
+      }
+
+      render() {
+        return (
+          <div>
+            <h1 onClick={Notice}>Welcome</h1>
+            <button onClick={this.Greet.bind(this)}>OK</button>
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(<Greeting />, document.getElementById('root')
+    );
+
+
+  </script>
+
+</body>
+
+</html>
